@@ -13,11 +13,7 @@ function App() {
     <div className="App">
       <h1>Hello World</h1>
       <p>We're going for JavaScript React ! ! !</p>
-
-      {/* {players.map((player) => (
-        <Performer name={player}></Performer>
-      ))} */}
-
+      
         {
           players.map(player => <Performer name = {player.name} job = {player.job}></Performer>)
         }
