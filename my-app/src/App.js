@@ -7,9 +7,9 @@ function App() {
       <p>We're going for JavaScript React ! ! !</p>
       <div className="myGrid">
       <MyFirstReactProject></MyFirstReactProject>
-      <Number></Number>
-      <Number></Number>
-      <Person></Person>
+      <Number name = 'Kabir'></Number>
+      <Number name = 'Singh'></Number>
+      <Person name = 'Rubel'></Person>
       </div>
     </div>
   );
@@ -38,20 +38,23 @@ function MyFirstReactProject() {
   )
 }
 
-function Number() {
+function Number(props) {
   return (
     <div className='number customStyle'>
       <h3 style={myStyle}>2.Number calculation with React JSX:</h3>
+      <h1>{props.name}</h1>
       <h5>number function repeated</h5>
       <p>Number: {555 + num1 + num2}</p>
     </div>
   )
 }
 
-function Person() {
+function Person(props) {
+  console.log(props);
   return (
     <div className='person customStyle'>
       <h3 style={myStyle}>3.Object text testing with React JSX:</h3>
+      <h1>{props.name}</h1>
       <p>Name: {hablu.name}</p>
       <p>Profession: {hablu.job}</p>
       <p>Age: {hablu.age}</p>
